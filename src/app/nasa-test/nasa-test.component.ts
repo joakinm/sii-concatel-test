@@ -18,7 +18,6 @@ export class NasaTestComponent implements OnInit {
     this.count = this.number;
     let intervalId = setInterval(() => {
       this.count = this.count - 1;
-        console.log(this.count)
         if(this.count === 0) {clearInterval(intervalId)}
     }, 1000)
   }

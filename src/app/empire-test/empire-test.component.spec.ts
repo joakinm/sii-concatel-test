@@ -6,16 +6,15 @@ describe('EmpireTestComponent', () => {
   let component: EmpireTestComponent;
   let fixture: ComponentFixture<EmpireTestComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ EmpireTestComponent ]
-    })
-    .compileComponents();
-  }));
-
   beforeEach(() => {
-    fixture = TestBed.createComponent(EmpireTestComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = new EmpireTestComponent();
+  });
+
+  it('should register rebels and planets', () => {
+    component.rebel = 'Claudio';
+    component.planet = 'Saturn';
+    component.testEmpireRegister();
+
+    expect(component.rebelsRecorded.length).toBe(1);
   });
 });
