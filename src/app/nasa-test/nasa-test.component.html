@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-sm-12">
+        <h1>NASA Test</h1>
+        <form (ngSubmit)="testNasa()" #f="ngForm">
+            <div class="row">
+                <div class="col-sm-5">
+                    <label for="fizz">Enter contdown seconds after launch</label>
+                    <input type="text" id="fizz" class="form-control" [(ngModel)]="number" name="fizz" required #fizz>
+                    <span class="help-block" *ngIf="!fizz.valid && fizz.touched">Enter a number</span>
+                </div>
+            </div>
+            <button class="btn btn-success" type="submit" [disabled]="!f.valid">Start Fizz</button>
+        </form>
+    </div>
+</div>
+
+<hr>
+<p>{{count === 0 ? 'Lauch!!' : count}}</p>
