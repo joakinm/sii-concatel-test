@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-sm-12">
+        <h1>FizzBuzz Test</h1>
+        <form (ngSubmit)="testFizzbuzz(number)" #f="ngForm">
+            <div class="row">
+                <div class="col-sm-5">
+                    <label for="fizz">Enter a number to start the FizzBuzz</label>
+                    <input type="text" id="fizz" class="form-control" [(ngModel)]="number" name="fizz" required #fizz>
+                    <span class="help-block" *ngIf="!fizz.valid && fizz.touched">Enter a number</span>
+                </div>
+            </div>
+            <button class="btn btn-success" type="submit" [disabled]="!f.valid">Start Fizz</button>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-10">
+        <hr>
+        <ul>
+            <p *ngFor="let num of array">{{num}}</p>
+        </ul>
+    </div>
+</div>
