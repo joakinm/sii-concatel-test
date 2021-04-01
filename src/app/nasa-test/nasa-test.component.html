@@ -1,15 +1,15 @@
 <div class="row">
     <div class="col-sm-12">
-        <h1>NASA Test</h1>
+        <app-header [title]="'NASA Test'"></app-header>
         <form (ngSubmit)="testNasa()" #f="ngForm">
             <div class="row">
                 <div class="col-sm-5">
-                    <label for="fizz">Enter contdown seconds after launch</label>
-                    <input type="text" id="fizz" class="form-control" [(ngModel)]="number" name="fizz" required #fizz>
-                    <span class="help-block" *ngIf="!fizz.valid && fizz.touched">Enter a number</span>
+                    <label for="nasa">Enter countdown seconds after launch</label>
+                    <input type="text" id="nasa" class="form-control" [(ngModel)]="number" name="nasa" required #nasa>
+                    <span class="help-block" *ngIf="!nasa.valid && nasa.touched">Enter a number</span>
                 </div>
             </div>
-            <button class="btn btn-success" type="submit" [disabled]="!f.valid">Start Fizz</button>
+            <button class="btn btn-success mt-2" type="submit" [disabled]="!f.valid">Start</button>
         </form>
     </div>
 </div>

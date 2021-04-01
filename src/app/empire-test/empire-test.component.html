@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-12">
-        <h1>Empire test</h1>
+        <app-header [title]="'Empire test'"></app-header>
         <form (ngSubmit)="testEmpireRegister()" #f="ngForm">
             <div class="row">
                 <div class="col-sm-5">
@@ -10,13 +10,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-5">
+                <div class="col-sm-5 mt-1">
                     <label for="planet">Enter his planet name</label>
                     <input type="text" id="planet" class="form-control" [(ngModel)]="planet" name="fizz" required #pla>
                     <span class="help-block" *ngIf="!pla.valid && pla.touched">Enter a planet's name</span>
                 </div>
             </div>
-            <button class="btn btn-success" type="submit" [disabled]="!f.valid">Start Fizz</button>
+            <button class="btn btn-success mt-2" type="submit" [disabled]="!f.valid">Start Fizz</button>
         </form>
     </div>
 </div>

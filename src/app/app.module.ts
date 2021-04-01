@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { NasaTestComponent } from './nasa-test/nasa-test.component';
 import { EmpireTestComponent } from './empire-test/empire-test.component';
 import { TestSelectorComponent } from './test-selector/test-selector.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TestSelectorComponent } from './test-selector/test-selector.component';
     FizzbuzzTestComponent,
     NasaTestComponent,
     EmpireTestComponent,
-    TestSelectorComponent
+    TestSelectorComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
