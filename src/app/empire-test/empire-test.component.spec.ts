@@ -1,10 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { EmpireTestComponent } from './empire-test.component';
 
 describe('EmpireTestComponent', () => {
   let component: EmpireTestComponent;
-  let fixture: ComponentFixture<EmpireTestComponent>;
 
   beforeEach(() => {
     component = new EmpireTestComponent();

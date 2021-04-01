@@ -6,34 +6,32 @@ describe('FizzbuzzTestComponent', () => {
 
   beforeEach(() => {
     component = new FizzbuzzTestComponent();
+    component.array = [];
   });
 
   it('returns "fizz" when the number is divisible by 3', () => {
-    component.array = [];
     component.testFizzbuzz(3);
-    
-    expect(component.array.shift()).toBe("fizz");
+    const result = component.array.shift();
+
+    expect(result).toBe("fizz");
   });
 
   it('returns "buzz" when the number is divisible by 5', () => {
-    component.array = [];
     component.testFizzbuzz(5);
-    
-    expect(component.array.shift()).toBe("buzz");
+    const result = component.array.shift();
+    expect(result).toBe("buzz");
   });
   it('returns "fizzbuzz" when the number is divisible by 3 and 5', () => {
-    component.array = [];
     component.testFizzbuzz(15);
-    
-    expect(component.array.shift()).toBe("fizzbuzz");
+    const result = component.array.shift();
+    expect(result).toBe("fizzbuzz");
   });
 
   it('returns a number when the number is not divisible by 3 or 5', () => {
     const num = 2;
-    component.array = [];
     component.testFizzbuzz(num);
-    
-    expect(component.array.shift()).toBe(num);
+    const result = component.array.shift();
+    expect(result).toBe(num);
   });
 
 });

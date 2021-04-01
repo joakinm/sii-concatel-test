@@ -3,7 +3,6 @@ import { NasaTestComponent } from './nasa-test.component';
 
 describe('NasaTestComponent', () => {
   let component: NasaTestComponent;
-  let timerCallbackFunction;
   beforeEach(() => {
     component = new (NasaTestComponent);
   });

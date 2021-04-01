@@ -22,12 +22,12 @@
 </div>
 
 <div class="row">
-    <div class="col-xs-12" *ngFor="let rebelRecorded of rebelsRecorded">
+    <div class="col-xs-12">
         <hr>
         <ul>
-            <p>
+            <li *ngFor="let rebelRecorded of rebelsRecorded">
               Rebel: {{rebelRecorded.rebelName}} of planet: {{rebelRecorded.planetName}} at {{rebelRecorded.registerDate | date: "medium"}}
-            </p>
+            </li>
         </ul>
     </div>
 </div>
