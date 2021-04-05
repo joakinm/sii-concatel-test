@@ -3,17 +3,14 @@ import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-nasa-test',
-  templateUrl: './nasa-test.component.html',
-  styleUrls: ['./nasa-test.component.css']
+  templateUrl: './nasa-test.component.html'
 })
-export class NasaTestComponent implements OnInit {
+export class NasaTestComponent {
   @ViewChild("f") form: NgForm;
   public number: number;
   public count: number;
   constructor() { }
 
-  ngOnInit(): void {
-  }
   public testNasa() {
     this.count = this.number;
     let intervalId = setInterval(() => {

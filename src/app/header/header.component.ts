@@ -3,15 +3,11 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  templateUrl: './header.component.html'
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   @Input() title: string;
   constructor(private router: Router) { }
-
-  ngOnInit(): void {
-  }
 
   return() {
     this.router.navigate(['../']);

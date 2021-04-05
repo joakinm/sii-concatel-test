@@ -10,20 +10,20 @@ describe('FizzbuzzTestComponent', () => {
   });
 
   it('returns "fizz" when the number is divisible by 3', () => {
-    component.testFizzbuzz(3);
-    const result = component.array.shift();
+    const arr = component.testFizzbuzz(3);
+    const result = arr.shift();
 
     expect(result).toBe("fizz");
   });
 
   it('returns "buzz" when the number is divisible by 5', () => {
-    component.testFizzbuzz(5);
+    const arr = component.testFizzbuzz(5);
     const result = component.array.shift();
     expect(result).toBe("buzz");
   });
   it('returns "fizzbuzz" when the number is divisible by 3 and 5', () => {
-    component.testFizzbuzz(15);
-    const result = component.array.shift();
+    const arr = component.testFizzbuzz(15);
+    const result = arr.shift();
     expect(result).toBe("fizzbuzz");
   });
 

@@ -3,18 +3,13 @@ import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-fizzbuzz-test',
-  templateUrl: './fizzbuzz-test.component.html',
-  styleUrls: ['./fizzbuzz-test.component.css']
+  templateUrl: './fizzbuzz-test.component.html'
 })
-export class FizzbuzzTestComponent implements OnInit {
+export class FizzbuzzTestComponent {
   @ViewChild("f") form: NgForm;
   public number: number;
   public array = [];
   constructor() { }
-
-  ngOnInit(): void {
-    
-  }
 
   public testFizzbuzz(num: number): Array<string> {
     for (let i = num; i <= 100; i++) {
@@ -30,5 +25,4 @@ export class FizzbuzzTestComponent implements OnInit {
     }
     return this.array;
   }
-
 }

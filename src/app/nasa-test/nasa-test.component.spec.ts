@@ -7,7 +7,7 @@ describe('NasaTestComponent', () => {
     component = new (NasaTestComponent);
   });
   
-  it('should call setInterval', fakeAsync(() => {
+  it('calls setInterval', fakeAsync(() => {
     component.number = 1;
     component.testNasa();
     tick(1001);
